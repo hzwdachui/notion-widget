@@ -1,0 +1,78 @@
+:root {
+    --background-light: #fff;
+    --background-dark: #191919;
+    --text-light: #4d331f; /* 深棕色的文字，仿旧的纸张风格 */
+    --text-dark: #f5e9d7;  /* 浅色文字 */
+    --border-light: #b28b67; /* 边框浅棕色 */
+    --border-dark: #4d331f; /* 边框深色 */
+    --font-family: 'Courier New', Courier, monospace; /* 复古打字机风格字体 */
+}
+
+html[data-theme='light'] {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    border-color: var(--border-light);
+}
+
+html[data-theme='dark'] {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+    border-color: var(--border-dark);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: var(--font-family);
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 6px solid var(--border-light); /* 加粗边框，复古相框效果 */
+    border-radius: 15px;
+    background: linear-gradient(145deg, #f3e3d7, #dfc7b7); /* 模拟怀旧纸张的背景 */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); /* 模拟复古相框的阴影 */
+}
+
+.time {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* 模拟旧时钟上有深浅的阴影效果 */
+}
+
+.date {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+}
+
+.day {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 600px) {
+    .time {
+        font-size: 3.5rem;
+    }
+    .date {
+        font-size: 1rem;
+    }
+    .day {
+        font-size: 1rem;
+    }
+}
